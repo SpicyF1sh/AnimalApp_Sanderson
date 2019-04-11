@@ -28,8 +28,12 @@ public class AnimalActivity extends AppCompatActivity {
         animals.add(duck);
         animals.add(fish);
 
-        this.output.append("\nDuck say " + animals.get(0).say());
-        this.output.append("\nFish goes " + animals.get(1).say());
+        String[] words = ["\nDuck say ", "\nFish goes "];
+
+        for (int i = 0; 1 < animals.size(); i++){
+            this.output.append(words[i] + animals.get(i).say());
+        }
+
         this.output.append("\nThe object at index 1: " + animals.get(1).say());
 
     }
